@@ -345,4 +345,8 @@ a {
   .header p{
     font-size: 10px;
   }
+  .abs{
+
+  transform: translateY(60%);
+  }
 }
