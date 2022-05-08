@@ -1,13 +1,348 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Limelight&family=Viaoda+Libre&display=swap');
+
+*
+{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+:root {
+  --pink: #6fb150;
+  --green:#6fb150;
+  --font-family-text: 'Belleza', sans-serif;
+    --font-family-heading: 'Limelight', cursive;
+    --font-family-logo: 'Viaoda Libre', cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body
+{
+  position: relative;
+}
+.header
+{
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pink);
+}
+.header p 
+{  
+  font-family: var(--font-family-text);
+  font-size: 12px; 
+
+}
+.logo
+{
+  height: 60px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  margin: auto; 
+   
+}
+.logo_one
+{
+  height: 100%;
+  width: 20%;
+}
+.logo_center{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_center h1
+{
+  font-size: 40px;
+  font-family: var(--font-family-logo);
+  font-weight: 100;
+  
+  color: #111111;
+}
+.logo_two{
+  width: 20%;
+  height: 100%;display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo_two i{
+  font-size: 17px;
+}
+.logo_two i:nth-child(2)
+{
+  font-weight: 100;
+  margin-right: 15px;
+}
+.logo_two i:nth-child(1) {
+  font-weight: 100;
+  margin-right: 15px;
+}
+.cart
+{
+  position: relative;
+  width: 40px;
+  height: 50%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+.quantity
+{
+  position: absolute;
+  font-size: 9px;
+  top: -15%;
+  right: 25%;  
+  font-weight: 300;
+  width: 14px;
+  text-align: center;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background-color: #6fb150;
+  color: white;
+}
+.navbar
+{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.navbar-margin
+{
+  height: 100%;
+  width: 900px;
+  margin: auto; 
+  display: flex; 
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-around;
+}
+a {
+  color: #111111;
+}
+.navbar-margin a 
+{
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration: none; 
+  font-family: var(--font-family-text);
+}
+.active
+{
+  color: var(--green);
+}
+.hero
+{  
+  
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.card 
+{
+  height: 350px;
+  width: 300px; 
+  position: relative;
+  border-radius: 5px;
+  object-fit: fill;
+  overflow: hidden;
+  transition: .3s ease;
+
+}
+
+.card .img img 
+{
+  width: 100%;
+  transition: 0.3s ease;
+}
+.card:hover img {
+  transform: scale(1.2);
+}
+ .abs
+ {
+   height: 100%;
+   background-color: #111111;
+   width: 100%;
+   padding: 10px;transition: .3s ease;
+   position: absolute;
+
+   top: 0%;
+   transform: translateY(100%);
+ }
+ .abs h3 
+ {
+   font-family: var(--font-family-text);
+   color: white;
+ }
+ .dropdown
+ {
+   display: flex;
+   margin-top: 20px;
+   align-items: center;
+   justify-content: space-around;
+ }
+    .dropdown button{
+      padding: 5px 14px;
+      border-radius: 3px;
+      border: transparent;
+      cursor: pointer;
+      background-color: #6fb150;
+      font-family: var(--font-family-logo);
+    }
+    .dropdown .love i 
+    {
+      color: white;cursor: pointer;
+    }
+
+        .card:hover .abs{
+          transform: translateY(60%);
+        }
+
+.sidebar
+{
+  height: 100vh;
+  min-height: 100vh;
+  width: 60%;
+  background-color: white;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  display: none;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 999;
+}
+.sidebar h4
+{
+  font-family: var(--font-family-text);
+  font-weight: 800;
+  font-size: 22px;
+}
+.sidebar p{
+  font-family: var(--font-family-text);
+  margin-bottom: 20px;
+}
+.overlay
+{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #11111146;
+  backdrop-filter: blur(3px);display: none;
+  z-index: 998;
+  padding: 20px;
+}
+.item
+{
+  height: 70px;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  font-family: var(--font-family-text);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.item .img {
+  width: 70px;
+  height: 100%;
+  object-fit: cover;
+}
+.item .img img 
+{
+  width: 100%;
+  height: 100%;
+}
+.item .img:hover .item .img img{
+  transform: scale(1.1);
+}
+.total
+{
+  height: 70px;
+  width: 100%;
+  background-color: #111111;
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.total h3 
+{
+  font-family: var(--font-family-text);
+  color: white;
+
+}
+.total button{
+  padding: 7px 10px;
+  font-family: var(--font-family-logo);
+  border-radius: 3px;
+  background-color: #6fb150;
+  color: white;
+  border: transparent;
+  cursor: pointer
+  ;
+}
+.counter
+{
+  width: 70px;   
+  height: 60px; 
+  display: flex; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.count{
+  color: white;
+}
+.counter button{
+ padding: 2px 8px;  
+ border-radius: 50%;
+} 
+.hearts{
+  position: relative;
+    width: 40px;
+    height: 50%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+ 
+@media all and (max-width:550px){
+  .sidebar{
+    width: 80%;
+  }
+  .logo_center h1{
+    font-size: 24px;
+  }
+  .logo_two i {
+    font-size: 12px;
+  }
+  .navbar{
+    margin-top: -5px;
+  }
+  .header p{
+    font-size: 10px;
+  }
 }
